@@ -33,7 +33,10 @@ find_package(Threads REQUIRED)
 # generate objects file
 add_library(${PROJECT_NAME}-objs OBJECT
 src/lib/sbs-client.hpp
-src/lib/sbs-client.raw.cpp src/lib/sbs-client.squad.cpp src/lib/sbs-client.user.cpp)
+src/lib/sbs-client.raw.cpp
+src/lib/sbs-client.squad.cpp
+src/lib/sbs-client.user.cpp
+src/lib/sbs-client.queryBuilder.cpp)
 target_compile_options(${PROJECT_NAME}-objs PRIVATE -Wall -fPIC)
 
 # generate shared library
